@@ -1,9 +1,9 @@
 //
-//  GradientView.swift
+//  LeagueVC.swift
 //  Smack
 //
-//  Created by Mac on 8/21/18.
-//  Copyright © 2018 Jonny B. All rights reserved.
+//  Created by Mac on 7/19/18.
+//  Copyright © 2018 CO.KrystynaKruchcovska. All rights reserved.
 //
 
 import UIKit

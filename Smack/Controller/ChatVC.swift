@@ -1,11 +1,10 @@
 //
-//  ChatVC.swift
+//  LeagueVC.swift
 //  Smack
 //
-//  Created by Jonny B on 7/14/17.
-//  Copyright © 2017 Jonny B. All rights reserved.
+//  Created by Mac on 7/19/18.
+//  Copyright © 2018 CO.KrystynaKruchcovska. All rights reserved.
 //
-
 import UIKit
 
 class ChatVC: UIViewController {

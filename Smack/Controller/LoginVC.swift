@@ -1,9 +1,9 @@
 //
-//  LoginVC.swift
-//  Smack
+//  LeagueVC.swift
+//  app-swoosh
 //
-//  Created by Mac on 8/22/18.
-//  Copyright © 2018 Jonny B. All rights reserved.
+//  Created by Mac on 7/19/18.
+//  Copyright © 2018 CO.KrystynaKruchcovska. All rights reserved.
 //
 
 import UIKit
@@ -20,4 +20,7 @@ class LoginVC: UIViewController {
        dismiss(animated: true,completion: nil)
     }
     
+    @IBAction func createAccountBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
+    }
 }
