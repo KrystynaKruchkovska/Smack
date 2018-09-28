@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		0471CFFD212C8D0900CDF951 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471CFFC212C8D0900CDF951 /* SWRevealViewController.m */; };
 		0471CFFF212C9AE400CDF951 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471CFFE212C9AE400CDF951 /* GradientView.swift */; };
+		0474CC96214A585700E9CBAD /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474CC95214A585700E9CBAD /* UserDataService.swift */; };
 		047D8BB72139667E0030F578 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D8BB62139667D0030F578 /* AuthService.swift */; };
+		04AEFE59215E2780007186B0 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEFE58215E2780007186B0 /* AvatarPickerVC.swift */; };
+		04AEFE5B215E2E0B007186B0 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEFE5A215E2E0B007186B0 /* AvatarCell.swift */; };
 		04D32EF2213D30C1003D6759 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D32EF1213D30C1003D6759 /* RoundedButton.swift */; };
 		04ECF132212D45F200CBA8F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF131212D45F200CBA8F9 /* Constants.swift */; };
 		04ECF134212D4F2800CBA8F9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF133212D4F2800CBA8F9 /* LoginVC.swift */; };
@@ -27,7 +30,10 @@
 		0471CFFB212C8D0900CDF951 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		0471CFFC212C8D0900CDF951 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0471CFFE212C9AE400CDF951 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = "Smack/Supporting Files/GradientView.swift"; sourceTree = SOURCE_ROOT; };
+		0474CC95214A585700E9CBAD /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		047D8BB62139667D0030F578 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		04AEFE58215E2780007186B0 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		04AEFE5A215E2E0B007186B0 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		04D32EF1213D30C1003D6759 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		04ECF131212D45F200CBA8F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04ECF133212D4F2800CBA8F9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				047D8BB62139667D0030F578 /* AuthService.swift */,
+				0474CC95214A585700E9CBAD /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 				F932BF481F19AB5200EBDCFC /* ChannelVC.swift */,
 				04ECF133212D4F2800CBA8F9 /* LoginVC.swift */,
 				04ECF135212D586000CBA8F9 /* CreateAccountVC.swift */,
+				04AEFE58215E2780007186B0 /* AvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 			children = (
 				0471CFFE212C9AE400CDF951 /* GradientView.swift */,
 				04D32EF1213D30C1003D6759 /* RoundedButton.swift */,
+				04AEFE5A215E2E0B007186B0 /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,12 +293,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F932BF491F19AB5200EBDCFC /* ChannelVC.swift in Sources */,
+				04AEFE59215E2780007186B0 /* AvatarPickerVC.swift in Sources */,
 				04D32EF2213D30C1003D6759 /* RoundedButton.swift in Sources */,
 				F932BF471F19AB4200EBDCFC /* ChatVC.swift in Sources */,
+				0474CC96214A585700E9CBAD /* UserDataService.swift in Sources */,
 				04ECF136212D586000CBA8F9 /* CreateAccountVC.swift in Sources */,
 				047D8BB72139667E0030F578 /* AuthService.swift in Sources */,
 				04ECF134212D4F2800CBA8F9 /* LoginVC.swift in Sources */,
 				0471CFFF212C9AE400CDF951 /* GradientView.swift in Sources */,
+				04AEFE5B215E2E0B007186B0 /* AvatarCell.swift in Sources */,
 				F932BF2D1F19A88100EBDCFC /* AppDelegate.swift in Sources */,
 				0471CFFD212C8D0900CDF951 /* SWRevealViewController.m in Sources */,
 				04ECF132212D45F200CBA8F9 /* Constants.swift in Sources */,
