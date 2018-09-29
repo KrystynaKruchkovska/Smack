@@ -32,4 +32,44 @@ class UserDataServise{
         
     }
     
+    func returnUIColor(components:String) -> UIColor{
+        let scanner = Scanner(string: components)
+        let skipped = CharacterSet(charactersIn:"[], ")
+        let comma = CharacterSet(charactersIn: ",")
+        scanner.charactersToBeSkipped = skipped
+        
+        var r,g,b,a : NSString?
+        
+        scanner.scanUpToCharacters(from: comma, into: &r)
+        scanner.scanUpToCharacters(from: comma, into: &g)
+        scanner.scanUpToCharacters(from: comma, into: &b)
+        scanner.scanUpToCharacters(from: comma, into: &a)
+        
+        let defoultColor = UIColor.gray
+        
+        
+        guard let rUnwrapped = r else {
+            return defoultColor
+        }
+        guard let gUnwrapped = g else {
+            return defoultColor
+        }
+        guard let bUnwrapped = b else {
+            return defoultColor
+        }
+        guard let aUnwrapped = a else {
+            return defoultColor
+        }
+        
+        
+        let rFloat = CGFloat(rUnwrapped.doubleValue)
+        let gFloat = CGFloat(gUnwrapped.doubleValue)
+        let bFloat = CGFloat(bUnwrapped.doubleValue)
+        let aFloat = CGFloat(aUnwrapped.doubleValue)
+        
+        let newColor = UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+        
+        return newColor
+    }
+    
 }
