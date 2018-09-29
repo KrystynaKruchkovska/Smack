@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040994D9215EB0C000C59F58 /* CircleImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040994D8215EB0C000C59F58 /* CircleImgView.swift */; };
 		0471CFFD212C8D0900CDF951 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471CFFC212C8D0900CDF951 /* SWRevealViewController.m */; };
 		0471CFFF212C9AE400CDF951 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471CFFE212C9AE400CDF951 /* GradientView.swift */; };
 		0474CC96214A585700E9CBAD /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474CC95214A585700E9CBAD /* UserDataService.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040994D8215EB0C000C59F58 /* CircleImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImgView.swift; sourceTree = "<group>"; };
 		0471CFFB212C8D0900CDF951 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		0471CFFC212C8D0900CDF951 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0471CFFE212C9AE400CDF951 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = "Smack/Supporting Files/GradientView.swift"; sourceTree = SOURCE_ROOT; };
@@ -162,6 +164,7 @@
 				0471CFFE212C9AE400CDF951 /* GradientView.swift */,
 				04D32EF1213D30C1003D6759 /* RoundedButton.swift */,
 				04AEFE5A215E2E0B007186B0 /* AvatarCell.swift */,
+				040994D8215EB0C000C59F58 /* CircleImgView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				F932BF491F19AB5200EBDCFC /* ChannelVC.swift in Sources */,
 				04AEFE59215E2780007186B0 /* AvatarPickerVC.swift in Sources */,
+				040994D9215EB0C000C59F58 /* CircleImgView.swift in Sources */,
 				04D32EF2213D30C1003D6759 /* RoundedButton.swift in Sources */,
 				F932BF471F19AB4200EBDCFC /* ChatVC.swift in Sources */,
 				0474CC96214A585700E9CBAD /* UserDataService.swift in Sources */,
