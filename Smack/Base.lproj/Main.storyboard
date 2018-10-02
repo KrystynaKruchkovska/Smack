@@ -191,6 +191,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="XoU-ER-0Q4" eventType="touchUpInside" id="Dbh-gb-FcF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6O-3A-bJb">
                                 <rect key="frame" x="62" y="336" width="251" height="30"/>
@@ -243,6 +246,10 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="b3q-BS-u42">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -251,6 +258,8 @@
                             <constraint firstItem="ttf-WV-Vge" firstAttribute="top" secondItem="nHJ-LN-EFM" secondAttribute="bottom" constant="8" id="Grb-nc-hF5"/>
                             <constraint firstItem="8XH-NZ-aTw" firstAttribute="centerX" secondItem="Nra-mB-rzQ" secondAttribute="centerX" id="Hid-Gy-q1l"/>
                             <constraint firstItem="T6O-3A-bJb" firstAttribute="centerX" secondItem="Nra-mB-rzQ" secondAttribute="centerX" id="Ov9-U6-sfw"/>
+                            <constraint firstItem="b3q-BS-u42" firstAttribute="centerX" secondItem="Nra-mB-rzQ" secondAttribute="centerX" id="Qq4-wH-ufl"/>
+                            <constraint firstItem="b3q-BS-u42" firstAttribute="centerY" secondItem="Nra-mB-rzQ" secondAttribute="centerY" constant="-100" id="hdN-nh-oNd"/>
                             <constraint firstItem="BAE-TH-GAR" firstAttribute="centerX" secondItem="Nra-mB-rzQ" secondAttribute="centerX" id="jWZ-i2-rU3"/>
                             <constraint firstItem="8XH-NZ-aTw" firstAttribute="top" secondItem="nHJ-LN-EFM" secondAttribute="bottom" constant="60" id="ju6-fO-YHI"/>
                             <constraint firstItem="ttf-WV-Vge" firstAttribute="trailing" secondItem="Nra-mB-rzQ" secondAttribute="trailingMargin" id="k5G-Mu-mlu"/>
@@ -259,6 +268,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="Frw-Rk-HbG" id="ILn-PV-ptI"/>
+                        <outlet property="spinner" destination="b3q-BS-u42" id="nxZ-WF-i8b"/>
+                        <outlet property="usernameTxt" destination="V2N-vH-JvF" id="r35-CW-CCf"/>
                         <segue destination="hiy-p5-ypq" kind="show" identifier="toCreateAccount" id="HgZ-gG-r0C"/>
                     </connections>
                 </viewController>
