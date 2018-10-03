@@ -25,6 +25,8 @@ class ChatVC: UIViewController {
                 
             })
         }
+//        MassegeService.instance.findAllChannels { (success) in
+//        }
     }
 
 }

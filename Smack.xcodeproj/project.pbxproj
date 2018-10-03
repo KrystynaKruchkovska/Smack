@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		040994D9215EB0C000C59F58 /* CircleImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040994D8215EB0C000C59F58 /* CircleImgView.swift */; };
+		041B9C522164E7E800F02C13 /* MassegeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9C512164E7E800F02C13 /* MassegeService.swift */; };
+		041B9C572164E9F500F02C13 /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9C562164E9F500F02C13 /* Channels.swift */; };
 		0471CFFD212C8D0900CDF951 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471CFFC212C8D0900CDF951 /* SWRevealViewController.m */; };
 		0471CFFF212C9AE400CDF951 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471CFFE212C9AE400CDF951 /* GradientView.swift */; };
 		0474CC96214A585700E9CBAD /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474CC95214A585700E9CBAD /* UserDataService.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		040994D8215EB0C000C59F58 /* CircleImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImgView.swift; sourceTree = "<group>"; };
+		041B9C512164E7E800F02C13 /* MassegeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassegeService.swift; sourceTree = "<group>"; };
+		041B9C562164E9F500F02C13 /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
 		0471CFFB212C8D0900CDF951 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		0471CFFC212C8D0900CDF951 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0471CFFE212C9AE400CDF951 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = "Smack/Supporting Files/GradientView.swift"; sourceTree = SOURCE_ROOT; };
@@ -70,11 +74,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041B9C552164E9D400F02C13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				041B9C562164E9F500F02C13 /* Channels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		047D8BB52139664C0030F578 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				047D8BB62139667D0030F578 /* AuthService.swift */,
 				0474CC95214A585700E9CBAD /* UserDataService.swift */,
+				041B9C512164E7E800F02C13 /* MassegeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -136,7 +149,7 @@
 				04B2B01521620B4D001651B6 /* XIBs */,
 				047D8BB52139664C0030F578 /* Services */,
 				04ECF130212D45BB00CBA8F9 /* Utilities */,
-				F932BF451F19AB3000EBDCFC /* Model */,
+				041B9C552164E9D400F02C13 /* Model */,
 				F932BF441F19AB2B00EBDCFC /* View */,
 				F932BF431F19AB2400EBDCFC /* Controller */,
 				F932BF3E1F19A96200EBDCFC /* Supporting Files */,
@@ -181,13 +194,6 @@
 				040994D8215EB0C000C59F58 /* CircleImgView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F932BF451F19AB3000EBDCFC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +321,8 @@
 				04B2B01321620B41001651B6 /* ProfileVCViewController.swift in Sources */,
 				040994D9215EB0C000C59F58 /* CircleImgView.swift in Sources */,
 				04D32EF2213D30C1003D6759 /* RoundedButton.swift in Sources */,
+				041B9C522164E7E800F02C13 /* MassegeService.swift in Sources */,
+				041B9C572164E9F500F02C13 /* Channels.swift in Sources */,
 				F932BF471F19AB4200EBDCFC /* ChatVC.swift in Sources */,
 				0474CC96214A585700E9CBAD /* UserDataService.swift in Sources */,
 				04ECF136212D586000CBA8F9 /* CreateAccountVC.swift in Sources */,
