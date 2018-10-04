@@ -14,7 +14,7 @@ class MassegeService {
     
     static let instance = MassegeService()
     
-    var channels = [Channels]()
+    var channels = [Channel]()
     
     func findAllChannels(completion:@escaping CompletionHandeler){
         Alamofire.request(GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
@@ -34,7 +34,7 @@ class MassegeService {
                         let name = item["name"].stringValue
                         let channelDescription = item["description"].stringValue
                         let id = item["_id"].stringValue
-                        let channel = Channels(channelTitle: name, channelDescription: channelDescription, id: id)
+                        let channel = Channel(channelTitle: name, channelDescription: channelDescription, id: id)
                            self.channels.append(channel)
                     }
 //                print(self.channels[0].channelTitle)

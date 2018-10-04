@@ -6,7 +6,8 @@
 //  Copyright © 2018 Jonny B. All rights reserved.
 
 import Foundation
-struct Channels {
+struct Channel {
+    
     public private(set) var channelTitle:String!
     public private(set) var channelDescription:String!
     public private(set) var id:String!
