@@ -15,6 +15,7 @@ class MassegeService {
     static let instance = MassegeService()
     
     var channels = [Channel]()
+    var selectedCghannal:Channel?
     
     func findAllChannels(completion:@escaping CompletionHandeler){
         Alamofire.request(GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
@@ -37,7 +38,7 @@ class MassegeService {
                         let channel = Channel(channelTitle: name, channelDescription: channelDescription, id: id)
                            self.channels.append(channel)
                     }
-//                print(self.channels[0].channelTitle)
+                NotificationCenter.default.post(name: NOTIF_CHANNALS_LOADED, object: nil)
                  completion(true)
                 }
 //
@@ -48,6 +49,8 @@ class MassegeService {
         }
         
     }
-    
+    func clearChannels (){
+        channels.removeAll()
+    }
     
 }

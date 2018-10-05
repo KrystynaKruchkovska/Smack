@@ -21,6 +21,8 @@ let GET_CHANNELS = "\(BASE_URL)channel/"
 let smackPurplePlaceholder = #colorLiteral(red: 0.3266413212, green: 0.4215201139, blue: 0.7752227187, alpha: 0.5)
 //Notification constant
 let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("NotifUserDataChanged")
+let NOTIF_CHANNALS_LOADED = Notification.Name("ChannelsLoaded")
+let NOTIF_CHANNAL_SELECTED = Notification.Name("ChannelSelected")
 
 
 // segues
