@@ -13,6 +13,7 @@
 		040CEDF7216644A900A8CBC4 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CEDF6216644A900A8CBC4 /* SocketService.swift */; };
 		040CEDF92167569500A8CBC4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CEDF82167569500A8CBC4 /* Message.swift */; };
 		0414D74A216B7EA3002D3F29 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0414D749216B7EA2002D3F29 /* KeyboardBoundView.swift */; };
+		0414D74E216B84FD002D3F29 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0414D74D216B84FD002D3F29 /* MessageCell.swift */; };
 		041B9C522164E7E800F02C13 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9C512164E7E800F02C13 /* MessageService.swift */; };
 		041B9C572164E9F500F02C13 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9C562164E9F500F02C13 /* Channel.swift */; };
 		041B9C592164FD8300F02C13 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9C582164FD8300F02C13 /* ChannelCell.swift */; };
@@ -44,6 +45,7 @@
 		040CEDF6216644A900A8CBC4 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		040CEDF82167569500A8CBC4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0414D749216B7EA2002D3F29 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		0414D74D216B84FD002D3F29 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		041B9C512164E7E800F02C13 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		041B9C562164E9F500F02C13 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		041B9C582164FD8300F02C13 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				040994D8215EB0C000C59F58 /* CircleImgView.swift */,
 				041B9C582164FD8300F02C13 /* ChannelCell.swift */,
 				0414D749216B7EA2002D3F29 /* KeyboardBoundView.swift */,
+				0414D74D216B84FD002D3F29 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				041B9C592164FD8300F02C13 /* ChannelCell.swift in Sources */,
 				04AEFE59215E2780007186B0 /* AvatarPickerVC.swift in Sources */,
 				04B2B01321620B41001651B6 /* ProfileVCViewController.swift in Sources */,
+				0414D74E216B84FD002D3F29 /* MessageCell.swift in Sources */,
 				040994D9215EB0C000C59F58 /* CircleImgView.swift in Sources */,
 				040CEDF92167569500A8CBC4 /* Message.swift in Sources */,
 				04D32EF2213D30C1003D6759 /* RoundedButton.swift in Sources */,
