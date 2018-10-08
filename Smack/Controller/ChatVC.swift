@@ -12,6 +12,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // Outlets
     @IBOutlet weak var menuBtn: UIButton!
     
+    @IBOutlet weak var sendBtn: UIButton!
+    
     @IBOutlet weak var messageTxtFld: UITextField!
     
     @IBOutlet weak var channelNameLbl: UILabel!
@@ -19,14 +21,19 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     
+    //Variables
+    
+    
+    var isTaping = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bindToKeyboard()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 80
-        tableView.rowHeight = UITableViewAuto
-        maticDimension
+        tableView.rowHeight = UITableViewAutomaticDimension
+        sendBtn.isHidden = true
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)
@@ -40,6 +47,16 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNAL_SELECTED, object: nil)
+        
+        SocketService.instance.getChatMassege(completion: { (success) in
+            if success {
+                self.tableView.reloadData()
+                if MessageService.instance.messages.count > 0{
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+                }
+            }
+        })
         
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail(completion: { (success) in
@@ -55,6 +72,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             onLoginGetMasseges()
         }else{
             channelNameLbl.text = "Please Log In"
+            tableView.reloadData()
         }
     }
         
@@ -64,6 +82,20 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc func handleTap(){
         view.endEditing(true)
+    }
+    
+
+    @IBAction func messagesBoxEditing(_ sender: Any) {
+        if messageTxtFld.text == ""{
+            isTaping = false
+            sendBtn.isHidden = true
+        }else{
+            if isTaping == false  {
+                self.sendBtn.isHidden = false
+            }
+            isTaping = true
+        }
+        
     }
     
     @IBAction func sendBtnPressed(_ sender: Any) {

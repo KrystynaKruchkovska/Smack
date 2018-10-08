@@ -65,6 +65,7 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @objc func userDataDidChange(_ notif:Notification){
         setupUserInfo()
+        
     }
     
     @objc func channelsLoaded(_ notif:Notification){
