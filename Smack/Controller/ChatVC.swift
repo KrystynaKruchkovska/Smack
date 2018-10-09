@@ -49,16 +49,27 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNAL_SELECTED, object: nil)
         
-        SocketService.instance.getChatMassege(completion: { (success) in
-            if success {
+        SocketService.instance.getChatMassege { (newMessage) in
+            if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn{
+                MessageService.instance.messages.append(newMessage)
                 self.tableView.reloadData()
-                if MessageService.instance.messages.count > 0{
+                
+                if MessageService.instance.messages.count > 0 {
                     let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
-                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+                self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+                    
                 }
             }
-        })
-        
+        }
+//            if success {
+//                self.tableView.reloadData()
+//                if MessageService.instance.messages.count > 0{
+//                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+//                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+//                }
+//            }
+//        })
+//
         SocketService.instance.getTypingUsers { (typingUsers) in
             guard let channelId = MessageService.instance.selectedChannel?.id else {return}
             var names = ""
