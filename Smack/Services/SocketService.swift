@@ -12,7 +12,7 @@ import SocketIO
 class SocketService: NSObject {
 
     static let instance = SocketService()
-    private var socket: SocketIOClient
+     var socket: SocketIOClient
     private var manager: SocketManager
     
     // for NSObjec we have to do super.init()
@@ -79,7 +79,7 @@ class SocketService: NSObject {
     
     func getTypingUsers(_ completionHandeler: @escaping (_ typingUsers :[String:String]) -> Void ){
         socket.on("userTypingUpdate") { (dataArray, ack) in
-            guard let typingUsers = dataArray[0] as? [String:String] else{return}
+            guard let typingUsers = dataArray[0] as? [String:String] else {return}
             completionHandeler(typingUsers)
         }
         
