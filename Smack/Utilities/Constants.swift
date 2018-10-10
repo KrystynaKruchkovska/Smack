@@ -20,6 +20,8 @@ let URL_GET_CHANNELS = "\(BASE_URL)channel/"
 let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel/"
 let URL_UPDATE_USER = "\(BASE_URL)user/"
 
+
+
 //Colors
 let smackPurplePlaceholder = #colorLiteral(red: 0.3266413212, green: 0.4215201139, blue: 0.7752227187, alpha: 0.5)
 //Notification constant

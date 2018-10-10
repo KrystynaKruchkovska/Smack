@@ -22,14 +22,14 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-
     }
 
     @IBAction func loginPressed(_ sender: Any) {
         spinner.isHidden = false
         spinner.startAnimating()
         guard let email = usernameTxt.text, usernameTxt.text != "" else {return}
-        guard let password = passwordTxt.text, passwordTxt.text != "" else {return}
+        let password = passwordTxt.text!
+        // TODO: guard password
         
         AuthService.instance.loginUser(email: email, password: password) { (success) in
             if success {
