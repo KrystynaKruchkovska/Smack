@@ -144,13 +144,13 @@ class AuthService{
     
     }
     func findUserByEmail(completion: @escaping CompletionHandeler){
-        
+
         Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method:.get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON {
             (response) in
             if response.result.error == nil {
                 guard let data = response.data else {return}
                 self.setUserInfo(data: data)
-                
+        
                 completion(true)
                 
             }
@@ -161,6 +161,30 @@ class AuthService{
         }
         
     }
+    
+//    func updateUserById(name:String, completion: @escaping CompletionHandeler) {
+//        let body:[String:String] = [
+//            "name" : name
+//        ]
+//        
+//        
+//        Alamofire.request("\(URL_UPDATE_USER)\(UserDataServise.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON {
+//            (response) in
+//            if response.result.error == nil {
+//                guard let data = response.data else {return}
+//                self.setUserInfo(data: data)
+//                
+//                completion(true)
+//                
+//            } else {
+//                completion(false)
+//                debugPrint(response.result.error as Any)
+//            }
+//        }
+//        
+//        
+//    }
+    
     func setUserInfo(data:Data){
         let json = try! JSON(data:data)
         let color = json["avatarColor"].stringValue
@@ -171,5 +195,7 @@ class AuthService{
         
         UserDataServise.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
     }
+    
+    
     
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
-// Outlets
+    // Outlets
     
     @IBOutlet weak var userImg: CircleImgView!
     
@@ -31,13 +31,13 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.channelsLoaded(_:)), name: NOTIF_CHANNALS_LOADED, object: nil)
         
-        SocketService.instance.getChannel { (success) in
+        SocketService.instance.startListeningOnGetChannel { (success) in
             if success {
                 self.tableView.reloadData()
             }
         }
         
-        SocketService.instance.getChatMassege { (newMessage) in
+        SocketService.instance.startListeningOnGetChatMessage { (newMessage) in
             if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn{
                 
                 MessageService.instance.unreadChannels.append(newMessage.channelId)
@@ -51,21 +51,21 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func addChannelBtnPressed(_ sender: Any) {
         if AuthService.instance.isLoggedIn{
-        let addChanel = AddChannelVC()
-        addChanel.modalPresentationStyle = .custom
-        present(addChanel, animated: true, completion: nil)
+            let addChanel = AddChannelVC()
+            addChanel.modalPresentationStyle = .custom
+            present(addChanel, animated: true, completion: nil)
         }
     }
     
-
+    
     @IBAction func loginBtnPressed(_ sender: Any) {
-       if AuthService.instance.isLoggedIn{
+        if AuthService.instance.isLoggedIn{
             //show profile page
-        let profile = ProfileVCViewController()
-        profile.modalPresentationStyle = .custom
-        present(profile, animated: true, completion: nil)
-       } else {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+            let profile = ProfileVCViewController()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
         }
         
     }
@@ -94,7 +94,7 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             tableView.reloadData()
         }
         
-
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {

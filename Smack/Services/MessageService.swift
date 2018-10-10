@@ -45,8 +45,8 @@ class MessageService {
                 
                     }
                 }else{
-                completion(false)
-                debugPrint(response.result.error!)
+                    completion(false)
+                    debugPrint(response.result.error!)
                 }
         }
         

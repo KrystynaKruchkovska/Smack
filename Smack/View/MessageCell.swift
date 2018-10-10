@@ -34,7 +34,7 @@ class MessageCell: UITableViewCell {
         
         guard var isoData = message.timeStamp else {return}
         let end = isoData.index(isoData.endIndex, offsetBy: -5)
-        isoData = isoData.substring(to: end)
+        isoData = String(isoData[..<end])
         
         let isoFormatter = ISO8601DateFormatter()
         let chatDate = isoFormatter.date(from: isoData.appending("Z"))

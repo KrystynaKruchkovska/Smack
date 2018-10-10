@@ -34,7 +34,7 @@
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbJ-UQ-jE5">
-                    <rect key="frame" x="20" y="153.5" width="335" height="360"/>
+                    <rect key="frame" x="20" y="154" width="335" height="360"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7W-qa-h1T">
                             <rect key="frame" x="299" y="8" width="28" height="28"/>
@@ -44,29 +44,29 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="3IK-Sk-fjK">
-                            <rect key="frame" x="88" y="52" width="159.5" height="210.5"/>
+                            <rect key="frame" x="88" y="58" width="159.5" height="198"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNE-9T-hA1">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNE-9T-hA1">
                                     <rect key="frame" x="17" y="0.0" width="126" height="27.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vjG-y1-eOb" customClass="CircleImgView" customModule="Smack" customModuleProvider="target">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vjG-y1-eOb" customClass="CircleImgView" customModule="Smack" customModuleProvider="target">
                                     <rect key="frame" x="30" y="41.5" width="100" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="9As-KM-dDc"/>
                                         <constraint firstAttribute="width" constant="100" id="MYh-nx-waN"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KrKruchkovska" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-NZ-MfX">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="KrKruchkovska" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-NZ-MfX">
                                     <rect key="frame" x="20" y="155.5" width="120" height="20.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KrKruch@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPL-46-u1C">
-                                    <rect key="frame" x="0.0" y="190" width="159.5" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="KrKruch@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPL-46-u1C">
+                                    <rect key="frame" x="0.0" y="190" width="159.5" height="8"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -74,13 +74,24 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cro-55-dtG">
-                            <rect key="frame" x="133.5" y="316" width="68" height="36"/>
+                            <rect key="frame" x="134" y="316" width="68" height="36"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                             <state key="normal" title="Logout">
                                 <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="v4o-Bk-VYv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoP-Ae-exm">
+                            <rect key="frame" x="125" y="273" width="85" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="85" id="lpg-2h-UmA"/>
+                                <constraint firstAttribute="height" constant="35" id="uyc-7g-Aaw"/>
+                            </constraints>
+                            <state key="normal" image="update-button-blue-hi"/>
+                            <connections>
+                                <action selector="updateUserByIDBtn:" destination="-1" eventType="touchUpInside" id="EJA-Ok-nUs"/>
                             </connections>
                         </button>
                     </subviews>
@@ -90,9 +101,12 @@
                         <constraint firstItem="N7W-qa-h1T" firstAttribute="top" secondItem="bbJ-UQ-jE5" secondAttribute="top" constant="8" id="9L1-Kf-jU5"/>
                         <constraint firstAttribute="trailing" secondItem="N7W-qa-h1T" secondAttribute="trailing" constant="8" id="BiX-7K-NcF"/>
                         <constraint firstItem="3IK-Sk-fjK" firstAttribute="centerY" secondItem="bbJ-UQ-jE5" secondAttribute="centerY" constant="-23" id="C5j-UQ-ksJ"/>
+                        <constraint firstItem="CoP-Ae-exm" firstAttribute="top" secondItem="3IK-Sk-fjK" secondAttribute="bottom" constant="17" id="JPe-Ks-Ten"/>
                         <constraint firstAttribute="bottom" secondItem="cro-55-dtG" secondAttribute="bottom" constant="8" id="MfT-UP-bb9"/>
                         <constraint firstItem="3IK-Sk-fjK" firstAttribute="centerX" secondItem="bbJ-UQ-jE5" secondAttribute="centerX" id="R1S-rH-MHN"/>
                         <constraint firstAttribute="height" constant="360" id="gta-ou-q4k"/>
+                        <constraint firstItem="CoP-Ae-exm" firstAttribute="centerX" secondItem="bbJ-UQ-jE5" secondAttribute="centerX" id="iPl-96-ARa"/>
+                        <constraint firstAttribute="bottom" secondItem="CoP-Ae-exm" secondAttribute="bottom" constant="52" id="mUz-M5-364"/>
                     </constraints>
                 </view>
             </subviews>
@@ -113,5 +127,6 @@
     <resources>
         <image name="closeButton" width="28" height="28"/>
         <image name="smackProfileIcon" width="192" height="192"/>
+        <image name="update-button-blue-hi" width="600" height="201"/>
     </resources>
 </document>

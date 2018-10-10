@@ -26,6 +26,23 @@ class ProfileVCViewController: UIViewController {
         setupView()
 
     }
+    
+    
+    @IBAction func updateUserByIDBtn(_ sender: Any) {
+        
+//        let name  = UserDataServise.instance.name
+//
+//        AuthService.instance.updateUserById(name: name) { (success) in
+//
+//            if success {
+//                self.userName.text = name
+//                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+//            }
+//        }
+        
+    }
+    
+    
 
     @IBAction func logoutPressed(_ sender: Any) {
         UserDataServise.instance.logoutUser()

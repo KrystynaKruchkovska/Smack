@@ -35,7 +35,8 @@ class SocketService: NSObject {
         completion(true)
     }
     
-    func getChannel (completion: @escaping CompletionHandeler){
+        
+    func startListeningOnGetChannel (completion: @escaping CompletionHandeler){
         socket.on("channelCreated") { (dataArray, ack) in
             guard let channelName =  dataArray[0] as? String else {return}
             guard let channelDesk =  dataArray[1] as? String else {return}
@@ -55,7 +56,7 @@ class SocketService: NSObject {
         completion(true)
     }
     
-    func getChatMassege(completion: @escaping (_ newMwssage:Message) -> Void){
+    func startListeningOnGetChatMessage(completion: @escaping (_ newMwssage:Message) -> Void){
         socket.on("messageCreated") { (dataArray, ack) in
             guard let msgBody =  dataArray[0] as? String else {return}
             guard let channelId =  dataArray[2] as? String else {return}
