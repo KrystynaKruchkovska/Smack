@@ -35,6 +35,7 @@ let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
 let UNWIND = "unwindToChannel"
 let TO_AVATAR_PICKER = "toAvatarPicker"
+let TO_REVEAL_VC = "toRevealVC"
 
 
 //Users defaults
