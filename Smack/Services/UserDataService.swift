@@ -27,10 +27,20 @@ class UserDataServise{
         self.email = email
         self.name = name
     }
+    
+    func updateName(name:String) {
+        self.name = name
+    }
+    
     func setAvatarName(avatarName:String) {
         self.avatarName = avatarName
         
     }
+    
+    func updateName(newName:String){
+        self.name = newName
+    }
+   
     
     func returnUIColor(components:String) -> UIColor{
         let scanner = Scanner(string: components)

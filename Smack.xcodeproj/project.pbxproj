@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04032F9D21722C1B00D4315D /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04032F9B21722C1B00D4315D /* UpdateVC.swift */; };
+		04032F9E21722C1B00D4315D /* UpdateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04032F9C21722C1B00D4315D /* UpdateVC.xib */; };
 		040994D9215EB0C000C59F58 /* CircleImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040994D8215EB0C000C59F58 /* CircleImgView.swift */; };
 		040CEDF42165EF9C00A8CBC4 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CEDF22165EF9C00A8CBC4 /* AddChannelVC.swift */; };
 		040CEDF52165EF9C00A8CBC4 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040CEDF32165EF9C00A8CBC4 /* AddChannelVC.xib */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04032F9B21722C1B00D4315D /* UpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
+		04032F9C21722C1B00D4315D /* UpdateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateVC.xib; sourceTree = "<group>"; };
 		040994D8215EB0C000C59F58 /* CircleImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImgView.swift; sourceTree = "<group>"; };
 		040CEDF22165EF9C00A8CBC4 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		040CEDF32165EF9C00A8CBC4 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			children = (
 				040CEDF32165EF9C00A8CBC4 /* AddChannelVC.xib */,
 				04B2B01221620B41001651B6 /* ProfileVCViewController.xib */,
+				04032F9C21722C1B00D4315D /* UpdateVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				04B2B01121620B41001651B6 /* ProfileVCViewController.swift */,
 				040CEDF22165EF9C00A8CBC4 /* AddChannelVC.swift */,
 				049E95E7216FCD5A00105935 /* HelloVC.swift */,
+				04032F9B21722C1B00D4315D /* UpdateVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 				04B2B01421620B41001651B6 /* ProfileVCViewController.xib in Resources */,
 				F932BF341F19A88100EBDCFC /* Assets.xcassets in Resources */,
 				F932BF321F19A88100EBDCFC /* Main.storyboard in Resources */,
+				04032F9E21722C1B00D4315D /* UpdateVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +352,7 @@
 				040CEDF7216644A900A8CBC4 /* SocketService.swift in Sources */,
 				F932BF491F19AB5200EBDCFC /* ChannelVC.swift in Sources */,
 				041B9C592164FD8300F02C13 /* ChannelCell.swift in Sources */,
+				04032F9D21722C1B00D4315D /* UpdateVC.swift in Sources */,
 				04AEFE59215E2780007186B0 /* AvatarPickerVC.swift in Sources */,
 				049E95E8216FCD5A00105935 /* HelloVC.swift in Sources */,
 				04B2B01321620B41001651B6 /* ProfileVCViewController.swift in Sources */,

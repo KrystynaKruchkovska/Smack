@@ -25,22 +25,26 @@ class ProfileVCViewController: UIViewController {
         super.viewDidLoad()
         setupView()
 
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ProfileVCViewController.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
     }
     
     
-    @IBAction func updateUserByIDBtn(_ sender: Any) {
+    @objc func userDataDidChange(_ notif: NotificationCenter){
+       setupView()
+    }
+    
+    @IBAction func updateUserInfoBtnPressed(_ sender: Any) {
         
-//        let name  = UserDataServise.instance.name
-//
-//        AuthService.instance.updateUserById(name: name) { (success) in
-//
-//            if success {
-//                self.userName.text = name
-//                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-//            }
-//        }
+    if AuthService.instance.isLoggedIn{
+            let updateNameVC = UpdateVC()
+            updateNameVC.modalPresentationStyle = .custom
+            present(updateNameVC, animated: true, completion: nil)
+        }
+        
         
     }
+
     
     
 
@@ -62,6 +66,7 @@ class ProfileVCViewController: UIViewController {
         profileImg.backgroundColor = UserDataServise.instance.returnUIColor(components: UserDataServise.instance.avatarColor)
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(ProfileVCViewController.closeTap(_:)))
         bgView.addGestureRecognizer(closeTouch)
+        
     }
     
     @objc func closeTap (_ regognizer:UITapGestureRecognizer){
