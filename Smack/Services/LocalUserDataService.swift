@@ -8,9 +8,9 @@
 
 import Foundation
 
-class UserDataServise{
+class LocalUserDataService{
     
-    static let instance = UserDataServise()
+    static let instance = LocalUserDataService()
     
     public private(set) var id = ""
     public private(set) var avatarColor = ""

@@ -19,9 +19,12 @@
 		041B9C522164E7E800F02C13 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9C512164E7E800F02C13 /* MessageService.swift */; };
 		041B9C572164E9F500F02C13 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9C562164E9F500F02C13 /* Channel.swift */; };
 		041B9C592164FD8300F02C13 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9C582164FD8300F02C13 /* ChannelCell.swift */; };
+		046E200921734CAA00E64E36 /* AdminPanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E200721734CAA00E64E36 /* AdminPanelVC.swift */; };
+		046E200C21735F1900E64E36 /* UsersDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E200B21735F1900E64E36 /* UsersDataService.swift */; };
+		046E200E21735FB700E64E36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E200D21735FB700E64E36 /* User.swift */; };
 		0471CFFD212C8D0900CDF951 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471CFFC212C8D0900CDF951 /* SWRevealViewController.m */; };
 		0471CFFF212C9AE400CDF951 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471CFFE212C9AE400CDF951 /* GradientView.swift */; };
-		0474CC96214A585700E9CBAD /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474CC95214A585700E9CBAD /* UserDataService.swift */; };
+		0474CC96214A585700E9CBAD /* LocalUserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474CC95214A585700E9CBAD /* LocalUserDataService.swift */; };
 		047D8BB72139667E0030F578 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D8BB62139667D0030F578 /* AuthService.swift */; };
 		049E95E8216FCD5A00105935 /* HelloVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E95E7216FCD5A00105935 /* HelloVC.swift */; };
 		04AEFE59215E2780007186B0 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEFE58215E2780007186B0 /* AvatarPickerVC.swift */; };
@@ -54,10 +57,13 @@
 		041B9C512164E7E800F02C13 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		041B9C562164E9F500F02C13 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		041B9C582164FD8300F02C13 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		046E200721734CAA00E64E36 /* AdminPanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelVC.swift; sourceTree = "<group>"; };
+		046E200B21735F1900E64E36 /* UsersDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataService.swift; sourceTree = "<group>"; };
+		046E200D21735FB700E64E36 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0471CFFB212C8D0900CDF951 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		0471CFFC212C8D0900CDF951 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0471CFFE212C9AE400CDF951 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = "Smack/Supporting Files/GradientView.swift"; sourceTree = SOURCE_ROOT; };
-		0474CC95214A585700E9CBAD /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		0474CC95214A585700E9CBAD /* LocalUserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserDataService.swift; sourceTree = "<group>"; };
 		047D8BB62139667D0030F578 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		049E95E7216FCD5A00105935 /* HelloVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloVC.swift; sourceTree = "<group>"; };
 		04AEFE58215E2780007186B0 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 			children = (
 				041B9C562164E9F500F02C13 /* Channel.swift */,
 				040CEDF82167569500A8CBC4 /* Message.swift */,
+				046E200D21735FB700E64E36 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,9 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				047D8BB62139667D0030F578 /* AuthService.swift */,
-				0474CC95214A585700E9CBAD /* UserDataService.swift */,
+				0474CC95214A585700E9CBAD /* LocalUserDataService.swift */,
 				041B9C512164E7E800F02C13 /* MessageService.swift */,
 				040CEDF6216644A900A8CBC4 /* SocketService.swift */,
+				046E200B21735F1900E64E36 /* UsersDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -208,6 +216,7 @@
 				040CEDF22165EF9C00A8CBC4 /* AddChannelVC.swift */,
 				049E95E7216FCD5A00105935 /* HelloVC.swift */,
 				04032F9B21722C1B00D4315D /* UpdateVC.swift */,
+				046E200721734CAA00E64E36 /* AdminPanelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046E200C21735F1900E64E36 /* UsersDataService.swift in Sources */,
 				0414D74A216B7EA3002D3F29 /* KeyboardBoundView.swift in Sources */,
 				040CEDF7216644A900A8CBC4 /* SocketService.swift in Sources */,
 				F932BF491F19AB5200EBDCFC /* ChannelVC.swift in Sources */,
@@ -363,9 +373,11 @@
 				041B9C522164E7E800F02C13 /* MessageService.swift in Sources */,
 				041B9C572164E9F500F02C13 /* Channel.swift in Sources */,
 				F932BF471F19AB4200EBDCFC /* ChatVC.swift in Sources */,
-				0474CC96214A585700E9CBAD /* UserDataService.swift in Sources */,
+				0474CC96214A585700E9CBAD /* LocalUserDataService.swift in Sources */,
 				04ECF136212D586000CBA8F9 /* CreateAccountVC.swift in Sources */,
+				046E200921734CAA00E64E36 /* AdminPanelVC.swift in Sources */,
 				047D8BB72139667E0030F578 /* AuthService.swift in Sources */,
+				046E200E21735FB700E64E36 /* User.swift in Sources */,
 				04ECF134212D4F2800CBA8F9 /* LoginVC.swift in Sources */,
 				040CEDF42165EF9C00A8CBC4 /* AddChannelVC.swift in Sources */,
 				0471CFFF212C9AE400CDF951 /* GradientView.swift in Sources */,

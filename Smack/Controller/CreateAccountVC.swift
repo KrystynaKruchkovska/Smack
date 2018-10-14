@@ -35,9 +35,9 @@ class CreateAccountVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if UserDataServise.instance.avatarName != ""{
-            userImg.image = UIImage(named: UserDataServise.instance.avatarName)
-            avatarName = UserDataServise.instance.avatarName
+        if LocalUserDataService.instance.avatarName != ""{
+            userImg.image = UIImage(named: LocalUserDataService.instance.avatarName)
+            avatarName = LocalUserDataService.instance.avatarName
             if avatarName.contains("light") && bgColor == nil {
                 userImg.backgroundColor = UIColor.lightGray
             }

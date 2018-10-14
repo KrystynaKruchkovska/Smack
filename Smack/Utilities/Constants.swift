@@ -18,7 +18,8 @@ let URL_USER_ADD = "\(BASE_URL)user/add"
 let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNELS = "\(BASE_URL)channel/"
 let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel/"
-let URL_UPDATE_USER = "\(BASE_URL)user/"
+let URL_FIND_ALL_USER = "\(BASE_URL)user/"
+
 
 
 // 5baf5e3ada557f00265e4779
@@ -36,6 +37,7 @@ let TO_CREATE_ACCOUNT = "toCreateAccount"
 let UNWIND = "unwindToChannel"
 let TO_AVATAR_PICKER = "toAvatarPicker"
 let TO_REVEAL_VC = "toRevealVC"
+let TO_ADMIN_PANEL = "toAdminPanel"
 
 
 //Users defaults
@@ -43,6 +45,8 @@ let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
+//Admins
+let adminsArray = ["5bc21854dfc8390026d1ca80"] // abc user
 
 //Headers
 let HEADER =  [

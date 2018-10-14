@@ -77,7 +77,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             var numberOfTypers = 0
             
             for(typingUser, channel) in typingUsers{
-                if typingUser != UserDataServise.instance.name && channel == channelId{
+                if typingUser != LocalUserDataService.instance.name && channel == channelId{
                     if names == ""{
                         names = typingUser
                     }else{
@@ -139,12 +139,12 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if messageTxtFld.text == ""{
             isTaping = false
             sendBtn.isHidden = true
-            SocketService.instance.socket.emit("stopType", UserDataServise.instance.name, channelId)
+            SocketService.instance.socket.emit("stopType", LocalUserDataService.instance.name, channelId)
             
         }else{
             if isTaping == false  {
                 self.sendBtn.isHidden = false
-                SocketService.instance.socket.emit("startType", UserDataServise.instance.name, channelId)
+                SocketService.instance.socket.emit("startType", LocalUserDataService.instance.name, channelId)
                 
             }
             isTaping = true
@@ -158,11 +158,11 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             guard let channelId = MessageService.instance.selectedChannel?.id else {return}
             guard let message = messageTxtFld.text else {return}
             
-            SocketService.instance.addMessage(messageBody: message, userId: UserDataServise.instance.id, channelId: channelId, completion: { (success) in
+            SocketService.instance.addMessage(messageBody: message, userId: LocalUserDataService.instance.id, channelId: channelId, completion: { (success) in
                 if success {
                     self.messageTxtFld.text = ""
                     self.messageTxtFld.resignFirstResponder()
-                    SocketService.instance.socket.emit("stopType", UserDataServise.instance.name, channelId)
+                    SocketService.instance.socket.emit("stopType", LocalUserDataService.instance.name, channelId)
                     
                     
                 }

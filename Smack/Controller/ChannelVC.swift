@@ -21,9 +21,12 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    @IBOutlet weak var adminPanel: RoundedButton!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        adminPanel.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
@@ -48,6 +51,21 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if adminsArray.contains(LocalUserDataService.instance.id) {
+          adminPanel.isHidden = false
+        }
+        
+        
+    }
+    
+    
+    @IBAction func adminPannelBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_ADMIN_PANEL, sender: nil)
+    }
+    
     
     @IBAction func addChannelBtnPressed(_ sender: Any) {
         if AuthService.instance.isLoggedIn{
@@ -83,9 +101,9 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     func setupUserInfo(){
         if AuthService.instance.isLoggedIn{
-            loginBtn.setTitle(UserDataServise.instance.name, for: .normal)
-            userImg.image = UIImage(named: UserDataServise.instance.avatarName)
-            userImg.backgroundColor = UserDataServise.instance.returnUIColor(components: UserDataServise.instance.avatarColor)
+            loginBtn.setTitle(LocalUserDataService.instance.name, for: .normal)
+            userImg.image = UIImage(named: LocalUserDataService.instance.avatarName)
+            userImg.backgroundColor = LocalUserDataService.instance.returnUIColor(components: LocalUserDataService.instance.avatarColor)
             
         }else{
             loginBtn.setTitle("Login", for: .normal)

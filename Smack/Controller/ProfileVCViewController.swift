@@ -49,7 +49,7 @@ class ProfileVCViewController: UIViewController {
     
 
     @IBAction func logoutPressed(_ sender: Any) {
-        UserDataServise.instance.logoutUser()
+        LocalUserDataService.instance.logoutUser()
         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         self.dismiss(animated: true, completion: nil)
         
@@ -60,10 +60,10 @@ class ProfileVCViewController: UIViewController {
     }
     
     func setupView(){
-        userName.text = UserDataServise.instance.name
-        userEmail.text = UserDataServise.instance.email
-        profileImg.image = UIImage(named: UserDataServise.instance.avatarName)
-        profileImg.backgroundColor = UserDataServise.instance.returnUIColor(components: UserDataServise.instance.avatarColor)
+        userName.text = LocalUserDataService.instance.name
+        userEmail.text = LocalUserDataService.instance.email
+        profileImg.image = UIImage(named: LocalUserDataService.instance.avatarName)
+        profileImg.backgroundColor = LocalUserDataService.instance.returnUIColor(components: LocalUserDataService.instance.avatarColor)
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(ProfileVCViewController.closeTap(_:)))
         bgView.addGestureRecognizer(closeTouch)
         

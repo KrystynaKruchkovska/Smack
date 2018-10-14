@@ -120,15 +120,11 @@ class AuthService{
             "avatarColor" : avatarColor
         ]
         
-        let authToken = AuthService.instance.authToken
-        
-      
-        
         Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER) .responseData {
             (response) in
             
-            let status = response.response?.statusCode
-            print( response.response?.statusCode)
+           
+            print( response.response?.statusCode ?? 0)
             
             if response.result.error == nil {
                 guard let data = response.data else {return}
@@ -162,19 +158,20 @@ class AuthService{
         
     }
     
+ 
     func updateUserNameById(name:String, completion: @escaping CompletionHandeler) {
         let body:[String:String] = [
             "name" : name,
             "email": self.userEmail,
-            "avatarName": UserDataServise.instance.avatarName,
-            "avatarColor" : UserDataServise.instance.avatarColor
+            "avatarName": LocalUserDataService.instance.avatarName,
+            "avatarColor" : LocalUserDataService.instance.avatarColor
         ]
         
         
-        Alamofire.request("\(URL_UPDATE_USER)\(UserDataServise.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON {
+        Alamofire.request("\(URL_FIND_ALL_USER)\(LocalUserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON {
             (response) in
             if response.result.error == nil {
-                UserDataServise.instance.updateName(name:name)
+                LocalUserDataService.instance.updateName(name:name)
                 completion(true)
                 
             } else {
@@ -196,7 +193,7 @@ class AuthService{
         let name = json["name"].stringValue
         let id = json["_id"].stringValue
         
-        UserDataServise.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+        LocalUserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
     }
     
     
