@@ -18,9 +18,9 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-//
-//        tableView.delegate = self
-//        tableView.dataSource = self
+
+        tableView.delegate = self
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -40,10 +40,13 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let userCell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
-        let user = UsersDataService.instance.users[indexPath.row]
-        userCell.textLabel!.text = user.name + " email:" + user.email
-        return userCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)  as UITableViewCell
+        let selectedUser = UsersDataService.instance.users[indexPath.row]
+        cell.textLabel?.text = selectedUser.name + " email:" + selectedUser.email
+        return cell
+        
+        
+
     }
     
     

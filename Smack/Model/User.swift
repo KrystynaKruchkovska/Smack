@@ -16,7 +16,6 @@ struct User {
     public private(set) var avatarName:String!
     public private(set) var email:String!
     public private(set) var name:String!
-
     
 }
 

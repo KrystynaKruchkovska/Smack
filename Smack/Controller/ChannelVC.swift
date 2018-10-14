@@ -122,6 +122,7 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         }else{
             return UITableViewCell()
         }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

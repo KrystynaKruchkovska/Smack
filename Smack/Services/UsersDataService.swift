@@ -16,6 +16,22 @@ class UsersDataService{
     
     var users = [User]()
     
+    func dataToUsersArray(data:Data){
+        if let json = try! JSON(data:data).array{
+            for item in json {
+                let avatarColor = item["avatarColor"].stringValue
+                let avatarName = item["avatarName"].stringValue
+                let email = item["email"].stringValue
+                let name = item["name"].stringValue
+                let id = item["_id"].stringValue
+                
+                let user = User(id: id, avatarColor: avatarColor, avatarName: avatarName, email: email, name: name)
+                self.users.append(user)
+            }
+        }
+    }
+    
+    
     func findAllUsers(completion: @escaping CompletionHandeler){
         
         Alamofire.request("\(URL_FIND_ALL_USER)", method:.get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON {
@@ -23,9 +39,11 @@ class UsersDataService{
             
             (response) in
             if response.result.error == nil {
-                guard let data = response.data else {return}
-                completion(true)
+                guard let data = response.data else { return }
                 
+              self.dataToUsersArray(data: data)
+                
+                completion(true)
             }
             else {
                 completion(false)
