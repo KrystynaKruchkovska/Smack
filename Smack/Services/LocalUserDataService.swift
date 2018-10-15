@@ -27,7 +27,11 @@ class LocalUserDataService{
         self.email = email
         self.name = name
     }
-    
+//    func deleteUser(user:User){
+//        
+//        
+//    }
+//    
     func updateName(name:String) {
         self.name = name
     }
@@ -37,10 +41,7 @@ class LocalUserDataService{
         
     }
     
-    func updateName(newName:String){
-        self.name = newName
-    }
-   
+
     
     func returnUIColor(components:String) -> UIColor{
         let scanner = Scanner(string: components)

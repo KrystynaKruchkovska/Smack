@@ -16,8 +16,11 @@ class UsersDataService{
     
     var users = [User]()
     
-    func dataToUsersArray(data:Data){
+    func dataToUsersArray(data:Data) {
         if let json = try! JSON(data:data).array{
+            
+            self.users.removeAll()
+            
             for item in json {
                 let avatarColor = item["avatarColor"].stringValue
                 let avatarName = item["avatarName"].stringValue
@@ -54,5 +57,6 @@ class UsersDataService{
         
     }
     
+
     
 }

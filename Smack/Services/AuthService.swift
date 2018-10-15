@@ -183,6 +183,32 @@ class AuthService{
         
     }
     
+    func deleteUserbyId( id:String, completion: @escaping CompletionHandeler){
+        
+        
+        Alamofire.request("\(URL_FIND_ALL_USER)\(id)", method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON {
+            (response) in
+            if response.result.error == nil {
+                
+         
+                
+                UsersDataService.instance.findAllUsers(completion: { (success) in
+                })
+                
+                completion(true)
+                
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+        
+        
+        
+        
+    }
+    
+    
  
     
     func setUserInfo(data:Data){

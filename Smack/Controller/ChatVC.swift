@@ -214,7 +214,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return cell
         }else{
             return UITableViewCell()
-            
         }
     }
     
