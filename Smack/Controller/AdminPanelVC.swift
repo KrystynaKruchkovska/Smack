@@ -21,37 +21,41 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(AdminPanelVC.refreshList(_:)), name: NOTIF_USERS_LIST_CHANGED, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         UsersDataService.instance.findAllUsers { (success) in
             if success{
-                self.tableView.reloadData()
+                self.refreshList()
             }
         }
     }
     
     @IBAction func deleteBtnPressed(_ sender: Any) {
-        //        NotificationCenter.default.post(name: NOTIF_USERS_LIST_CHANGED, object: nil)
         let selectedRow = tableView.indexPathForSelectedRow?.row
         let id = UsersDataService.instance.users[selectedRow!].id
         
+        print("DeleteBtnPressed with row:\(selectedRow)")
+        
         AuthService.instance.deleteUserbyId(id: id!) { (success) in
+            print("auth service delete user handler")
             if success {
-                self.tableView.reloadData()
+                print("auth service delete user handler success")
+                print("Left in array:\(UsersDataService.instance.users.count)")
+                self.refreshList()
             }
         }
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
-        
         dismiss(animated: true, completion: nil)
     }
     
-    @objc func refreshList(_ notif: NotificationCenter) {
-        self.tableView.reloadData()
+    func refreshList() {
+        print("refresh list")
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,6 +85,7 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("Number of rows:\(UsersDataService.instance.users.count)")
         return UsersDataService.instance.users.count
     }
     

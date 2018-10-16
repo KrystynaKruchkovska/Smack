@@ -193,6 +193,9 @@ class AuthService{
          
                 
                 UsersDataService.instance.findAllUsers(completion: { (success) in
+                    if success {
+                        //send notification to AdminPanel, in admin panel, on notification refreshTableView
+                    }
                 })
                 
                 completion(true)
@@ -221,6 +224,7 @@ class AuthService{
         
         LocalUserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
     }
+    
     
     
     

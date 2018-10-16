@@ -29,7 +29,6 @@ let smackPurplePlaceholder = #colorLiteral(red: 0.3266413212, green: 0.421520113
 let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("NotifUserDataChanged")
 let NOTIF_CHANNALS_LOADED = Notification.Name("ChannelsLoaded")
 let NOTIF_CHANNAL_SELECTED = Notification.Name("ChannelSelected")
-let NOTIF_USERS_LIST_CHANGED = Notification.Name("NotifUsersListChanged")
 
 
 // segues
@@ -47,7 +46,7 @@ let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
 //Admins
-let adminsArray = ["5bc21854dfc8390026d1ca80"] // abc user
+let adminsArray = ["5bc62c2120a77a00261e4358"] // admin user
 
 //Headers
 let HEADER =  [
