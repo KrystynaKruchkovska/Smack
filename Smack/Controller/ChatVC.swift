@@ -62,15 +62,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
-        //            if success {
-        //                self.tableView.reloadData()
-        //                if MessageService.instance.messages.count > 0{
-        //                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
-        //                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
-        //                }
-        //            }
-        //        })
-        //
         SocketService.instance.getTypingUsers { (typingUsers) in
             guard let channelId = MessageService.instance.selectedChannel?.id else {return}
             var names = ""
@@ -110,6 +101,12 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
        
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector (ChannelVC.userLogout(_:)), name: NOTIF_USER_LOGOUT, object: nil)
+        messageTxtFld.isHidden = true
     }
     
     

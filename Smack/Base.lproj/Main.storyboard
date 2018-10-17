@@ -326,6 +326,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-Ab-liA">
+                                <rect key="frame" x="359" y="487" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BBQ-y0-e9m"/>
+                                    <constraint firstAttribute="width" constant="50" id="GFF-ag-YxN"/>
+                                </constraints>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DeO-7O-QZd">
                                 <rect key="frame" x="0.0" y="77" width="768" height="927"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -429,13 +437,16 @@
                             <constraint firstAttribute="trailing" secondItem="knG-jI-GVk" secondAttribute="trailing" id="0LB-y3-tLg"/>
                             <constraint firstItem="knG-jI-GVk" firstAttribute="top" secondItem="LiX-BW-gk1" secondAttribute="top" id="FlQ-pE-1i9"/>
                             <constraint firstItem="vvG-Bk-EK3" firstAttribute="top" secondItem="DeO-7O-QZd" secondAttribute="bottom" constant="20" id="GNf-Di-BlX"/>
+                            <constraint firstItem="2Zc-Ab-liA" firstAttribute="centerX" secondItem="LiX-BW-gk1" secondAttribute="centerX" id="SKw-Y8-c2G"/>
                             <constraint firstAttribute="trailing" secondItem="DeO-7O-QZd" secondAttribute="trailing" id="XE4-Q4-tGe"/>
                             <constraint firstItem="DeO-7O-QZd" firstAttribute="top" secondItem="knG-jI-GVk" secondAttribute="bottom" id="aeS-4v-D4p"/>
                             <constraint firstItem="knG-jI-GVk" firstAttribute="leading" secondItem="LiX-BW-gk1" secondAttribute="leading" id="i9n-oa-15j"/>
                             <constraint firstItem="DeO-7O-QZd" firstAttribute="leading" secondItem="LiX-BW-gk1" secondAttribute="leading" id="o4G-s8-0g7"/>
+                            <constraint firstItem="2Zc-Ab-liA" firstAttribute="centerY" secondItem="LiX-BW-gk1" secondAttribute="centerY" id="zlx-WW-ntq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="spinner" destination="2Zc-Ab-liA" id="yqG-zO-0qH"/>
                         <outlet property="tableView" destination="DeO-7O-QZd" id="9Ac-lf-lvS"/>
                     </connections>
                 </viewController>

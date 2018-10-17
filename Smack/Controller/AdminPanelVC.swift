@@ -12,6 +12,8 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     
     
     
@@ -32,9 +34,13 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     @IBAction func deleteBtnPressed(_ sender: Any) {
+        
+        spinner.isHidden = false
+        spinner.startAnimating()
+        
         let selectedRow = tableView.indexPathForSelectedRow?.row
         let id = UsersDataService.instance.users[selectedRow!].id
-        
+   
         print("DeleteBtnPressed with row:\(selectedRow)")
         
         AuthService.instance.deleteUserbyId(id: id!) { (success) in
@@ -42,10 +48,18 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             if success {
                 print("auth service delete user handler success")
                 print("Left in array:\(UsersDataService.instance.users.count)")
-                self.refreshList()
+              NotificationCenter.default.addObserver(self, selector: #selector(AdminPanelVC.fondAllUsers(_:)), name: NOTIF_FIND_ALL_USER, object: nil)
+                self.spinner.isHidden = true
+                self.spinner.stopAnimating()
+//                self.refreshList()
             }
         }
     }
+    
+    @objc func fondAllUsers(_ notif:Notification){
+        self.refreshList()
+    }
+    
     
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -67,20 +81,6 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         cell?.deleteBtn.isHidden = false
         
         return cell!
-        
-        
-        
-        
-        //        if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell{
-        //            let massege = MessageService.instance.messages[indexPath.row]
-        //            cell.configureCell(message: massege)
-        //            return cell
-        //        }else{
-        //            return UITableViewCell()
-        //
-        //        }
-        //
-        
     }
     
     

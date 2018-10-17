@@ -26,10 +26,14 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         adminPanel.isHidden = true
+    
+        
         tableView.delegate = self
         tableView.dataSource = self
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.channelsLoaded(_:)), name: NOTIF_CHANNALS_LOADED, object: nil)
@@ -50,6 +54,7 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     }
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
+         NotificationCenter.default.addObserver(self, selector: #selector(userLogout(_:)), name: NOTIF_USER_LOGOUT, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,6 +91,10 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             performSegue(withIdentifier: TO_LOGIN, sender: nil)
         }
         
+    }
+     @objc func userLogout(_ notif:Notification){
+        adminPanel.isHidden = true
+        tableView.reloadData()
     }
     
     @objc func userDataDidChange(_ notif:Notification){
