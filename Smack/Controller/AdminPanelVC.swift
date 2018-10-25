@@ -24,7 +24,7 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-         NotificationCenter.default.addObserver(self, selector: #selector(AdminPanelVC.onAllUsersFound(_:)), name: NOTIF_ALL_USERS_FOUND, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AdminPanelVC.onAllUsersFound(_:)), name: NOTIF_ALL_USERS_FOUND, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +35,7 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         }
     }
     
-
+    
     
     @objc func onAllUsersFound(_ notif:Notification){
         self.refreshList()
@@ -62,7 +62,7 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         cell?.userName?.text = selectedUser.name
         cell?.userEmailLbl.text = selectedUser.email
         cell?.userImg.image = UIImage(named: selectedUser.avatarName)
-  
+        
         
         return cell!
     }
@@ -79,25 +79,43 @@ class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+        
+        if UsersDataService.instance.isAdmin(userId: UsersDataService.instance.users[indexPath.row].id)  {
+//            return [UITableViewRowAction]()
             
-            let deletedRow  = indexPath.row
-            let id = UsersDataService.instance.users[deletedRow].id
-
-            
-            AuthService.instance.deleteUserbyId(id: id!) { (success) in
-                
-                if success {
-                    self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                }
+            let impossibledelete = UITableViewRowAction(style: .normal, title: "Impossible delete admin") { (rowAction, indexPath) in
+               
             }
-          
+                impossibledelete.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+             return [impossibledelete]
+            
+            
+        }else{
+            
+            let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+                
+                
+                
+                let deletedRow  = indexPath.row
+                
+                let id = UsersDataService.instance.users[deletedRow].id
+                
+                
+                AuthService.instance.deleteUserbyId(id: id!) { (success) in
+                    
+                    if success {
+                        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                    }
+                }
+                
+                
+            }
+            deleteAction.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+            return [deleteAction]
             
         }
-         deleteAction.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
-        return [deleteAction]
+        
         
     }
-    
     
 }
