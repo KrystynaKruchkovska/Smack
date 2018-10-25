@@ -105,7 +105,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector (ChannelVC.userLogout(_:)), name: NOTIF_USER_LOGOUT, object: nil)
         messageTxtFld.isHidden = true
     }
     

@@ -17,23 +17,17 @@ class UserCell: UITableViewCell {
     
     @IBOutlet weak var userEmailLbl: UILabel!
     
-    @IBOutlet weak var deleteBtn: UIButton!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        if selected{
-            self.deleteBtn.isHidden = false
-        }else{
-            self.deleteBtn.isHidden = true
-            
-        }
+
+  
     }
 
 }

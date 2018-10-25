@@ -37,6 +37,7 @@ class ChannelVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.channelsLoaded(_:)), name: NOTIF_CHANNALS_LOADED, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector (ChannelVC.userLogout(_:)), name: NOTIF_USER_LOGOUT, object: nil)
         
         SocketService.instance.startListeningOnGetChannel { (success) in
             if success {

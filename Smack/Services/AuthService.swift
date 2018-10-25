@@ -191,14 +191,10 @@ class AuthService{
                 
                 UsersDataService.instance.findAllUsers(completion: { (success) in
                     if success {
-                        
-                        
-                        NotificationCenter.default.post(name: NOTIF_FIND_ALL_USER, object: nil)
-                        //send notification to AdminPanel, in admin panel, on notification refreshTableView
+                        NotificationCenter.default.post(name: NOTIF_ALL_USERS_FOUND, object: nil)
+                        completion(true)
                     }
                 })
-                
-                completion(true)
                 
             } else {
                 completion(false)
