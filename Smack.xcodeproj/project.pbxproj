@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0400E7162188EF1C00A31966 /* DataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E7152188EF1C00A31966 /* DataValidator.swift */; };
 		04032F9D21722C1B00D4315D /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04032F9B21722C1B00D4315D /* UpdateVC.swift */; };
 		04032F9E21722C1B00D4315D /* UpdateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04032F9C21722C1B00D4315D /* UpdateVC.xib */; };
 		040994D9215EB0C000C59F58 /* CircleImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040994D8215EB0C000C59F58 /* CircleImgView.swift */; };
@@ -33,6 +34,8 @@
 		04B2B01421620B41001651B6 /* ProfileVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B2B01221620B41001651B6 /* ProfileVCViewController.xib */; };
 		04C363FD21746FF400AFCF8D /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C363FC21746FF400AFCF8D /* UserCell.swift */; };
 		04D32EF2213D30C1003D6759 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D32EF1213D30C1003D6759 /* RoundedButton.swift */; };
+		04EBDBBB218861DB00563551 /* LogginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBDBBA218861DB00563551 /* LogginError.swift */; };
+		04EBDBBD21886C2C00563551 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBDBBC21886C2C00563551 /* Alert.swift */; };
 		04ECF132212D45F200CBA8F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF131212D45F200CBA8F9 /* Constants.swift */; };
 		04ECF134212D4F2800CBA8F9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF133212D4F2800CBA8F9 /* LoginVC.swift */; };
 		04ECF136212D586000CBA8F9 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF135212D586000CBA8F9 /* CreateAccountVC.swift */; };
@@ -46,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0400E7152188EF1C00A31966 /* DataValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidator.swift; sourceTree = "<group>"; };
 		04032F9B21722C1B00D4315D /* UpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
 		04032F9C21722C1B00D4315D /* UpdateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateVC.xib; sourceTree = "<group>"; };
 		040994D8215EB0C000C59F58 /* CircleImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImgView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 		04B2B01221620B41001651B6 /* ProfileVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVCViewController.xib; sourceTree = "<group>"; };
 		04C363FC21746FF400AFCF8D /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		04D32EF1213D30C1003D6759 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		04EBDBBA218861DB00563551 /* LogginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginError.swift; sourceTree = "<group>"; };
+		04EBDBBC21886C2C00563551 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		04ECF131212D45F200CBA8F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04ECF133212D4F2800CBA8F9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		04ECF135212D586000CBA8F9 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 				041B9C562164E9F500F02C13 /* Channel.swift */,
 				040CEDF82167569500A8CBC4 /* Message.swift */,
 				046E200D21735FB700E64E36 /* User.swift */,
+				04EBDBBC21886C2C00563551 /* Alert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				04ECF131212D45F200CBA8F9 /* Constants.swift */,
+				04EBDBBA218861DB00563551 /* LogginError.swift */,
+				0400E7152188EF1C00A31966 /* DataValidator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -374,6 +383,8 @@
 				040CEDF92167569500A8CBC4 /* Message.swift in Sources */,
 				04D32EF2213D30C1003D6759 /* RoundedButton.swift in Sources */,
 				041B9C522164E7E800F02C13 /* MessageService.swift in Sources */,
+				0400E7162188EF1C00A31966 /* DataValidator.swift in Sources */,
+				04EBDBBB218861DB00563551 /* LogginError.swift in Sources */,
 				041B9C572164E9F500F02C13 /* Channel.swift in Sources */,
 				F932BF471F19AB4200EBDCFC /* ChatVC.swift in Sources */,
 				04C363FD21746FF400AFCF8D /* UserCell.swift in Sources */,
@@ -383,6 +394,7 @@
 				047D8BB72139667E0030F578 /* AuthService.swift in Sources */,
 				046E200E21735FB700E64E36 /* User.swift in Sources */,
 				04ECF134212D4F2800CBA8F9 /* LoginVC.swift in Sources */,
+				04EBDBBD21886C2C00563551 /* Alert.swift in Sources */,
 				040CEDF42165EF9C00A8CBC4 /* AddChannelVC.swift in Sources */,
 				0471CFFF212C9AE400CDF951 /* GradientView.swift in Sources */,
 				04AEFE5B215E2E0B007186B0 /* AvatarCell.swift in Sources */,

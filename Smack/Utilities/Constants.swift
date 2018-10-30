@@ -10,6 +10,7 @@ import Foundation
 
 typealias CompletionHandeler = (_ Success: Bool) -> ()
 
+
 //URL Constants
 let BASE_URL = "https://tinaschattychatchat.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"

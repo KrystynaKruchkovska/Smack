@@ -306,7 +306,7 @@
                     <connections>
                         <outlet property="passwordTxt" destination="Frw-Rk-HbG" id="ILn-PV-ptI"/>
                         <outlet property="spinner" destination="b3q-BS-u42" id="nxZ-WF-i8b"/>
-                        <outlet property="usernameTxt" destination="V2N-vH-JvF" id="r35-CW-CCf"/>
+                        <outlet property="usernameTxt" destination="V2N-vH-JvF" id="eZ6-am-JJt"/>
                         <segue destination="hiy-p5-ypq" kind="show" identifier="toCreateAccount" id="HgZ-gG-r0C"/>
                     </connections>
                 </viewController>

@@ -34,6 +34,15 @@ class CreateAccountVC: UIViewController {
 
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+//        if segue.destination is LoginVC
+//        {
+//            let vc = segue.destination as? LoginVC
+//            vc?.doCheckLogin() 
+//        }
+//    }
+    
     override func viewDidAppear(_ animated: Bool) {
         if LocalUserDataService.instance.avatarName != ""{
             userImg.image = UIImage(named: LocalUserDataService.instance.avatarName)
