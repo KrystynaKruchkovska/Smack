@@ -49,7 +49,7 @@ let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
 //Admins
-let adminsArray = ["5bd191ebf3dac00026e93b06"] // admin user
+let adminsArray = ["5bdec3aefb065b00268f2a96"] // admin user
 
 //Headers
 let HEADER =  [

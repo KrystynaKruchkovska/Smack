@@ -103,10 +103,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
        
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        messageTxtFld.isHidden = true
-    }
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//        messageTxtFld.isHidden = true
+//    }
     
     
     @objc func userDataDidChange(_ notif: NotificationCenter){
@@ -128,7 +128,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBAction func messagesBoxEditing(_ sender: Any) {
-        guard  let channelId = MessageService.instance.selectedChannel?.id else {
+        guard  let channelId = MessageService.instance.selectedChannel?.id, AuthService.instance.isLoggedIn else {
             return
         }
         
