@@ -11,6 +11,7 @@
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Bold</string>
+            <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-Italic</string>
             <string>AvenirNext-Medium</string>
         </array>
@@ -248,7 +249,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="BAE-TH-GAR">
                                 <rect key="frame" x="259" y="160" width="250" height="86"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2N-vH-JvF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2N-vH-JvF">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="xCH-vq-jqs"/>
@@ -748,7 +749,7 @@
                                     <constraint firstItem="ahf-Pe-04h" firstAttribute="centerY" secondItem="1DW-3Z-d9n" secondAttribute="centerY" id="fha-yW-hyf"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLy-iW-n4h">
+                            <textField opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLy-iW-n4h">
                                 <rect key="frame" x="0.0" y="984" width="768" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="XE5-dG-ocM"/>
@@ -891,11 +892,22 @@
                                             <constraint firstAttribute="height" constant="290" id="7rH-0J-waP"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;  SWIPE FOR BEGGINING  &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkb-Gu-X5u">
+                                        <rect key="frame" x="200" y="919" width="369" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="W5C-QM-zgA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="27"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="hbJ-fJ-2mQ" firstAttribute="centerX" secondItem="o6K-aD-dbe" secondAttribute="centerX" id="3ZO-Zs-Xso"/>
+                                    <constraint firstItem="fkb-Gu-X5u" firstAttribute="centerX" secondItem="o6K-aD-dbe" secondAttribute="centerX" id="5mu-Vr-fEn"/>
                                     <constraint firstItem="Wpa-Mw-W4y" firstAttribute="top" secondItem="hbJ-fJ-2mQ" secondAttribute="bottom" constant="29" id="6OD-6l-j8z"/>
+                                    <constraint firstAttribute="bottom" secondItem="fkb-Gu-X5u" secondAttribute="bottom" constant="50" id="NAp-vk-Ina"/>
                                     <constraint firstItem="hbJ-fJ-2mQ" firstAttribute="top" secondItem="o6K-aD-dbe" secondAttribute="top" constant="38.5" id="lFf-tG-ChI"/>
                                     <constraint firstItem="Wpa-Mw-W4y" firstAttribute="centerX" secondItem="hbJ-fJ-2mQ" secondAttribute="centerX" id="zIf-OQ-a8N"/>
                                 </constraints>
@@ -910,12 +922,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toRevealVC" action="showDetailViewController:sender:" id="4VH-Iw-kbi"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toRevealVC" id="4VH-Iw-kbi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypA-NQ-atG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626.39999999999998" y="-97.601199400299862"/>
+            <point key="canvasLocation" x="-626.5625" y="-97.8515625"/>
         </scene>
     </scenes>
     <resources>

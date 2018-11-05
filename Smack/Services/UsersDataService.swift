@@ -29,9 +29,7 @@ class UsersDataService{
                 let id = item["_id"].stringValue
                 
                 let user = User(id: id, avatarColor: avatarColor, avatarName: avatarName, email: email, name: name)
-//                if adminsArray.contains(user.id){
-//                    continue
-//                }
+
                 self.users.append(user)
             }
         }

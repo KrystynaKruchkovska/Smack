@@ -36,6 +36,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.rowHeight = UITableViewAutomaticDimension
         sendBtn.isHidden = true
         
+        messageTxtFld.rightView = sendBtn
+        
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)

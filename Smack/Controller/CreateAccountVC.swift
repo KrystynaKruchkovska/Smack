@@ -34,14 +34,7 @@ class CreateAccountVC: UIViewController {
 
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-//        if segue.destination is LoginVC
-//        {
-//            let vc = segue.destination as? LoginVC
-//            vc?.doCheckLogin() 
-//        }
-//    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         if LocalUserDataService.instance.avatarName != ""{
@@ -62,6 +55,12 @@ class CreateAccountVC: UIViewController {
         {return}
         guard let pass = passTxt.text, passTxt.text != "" else
         {return}
+        
+        if !DataValidator.isCredentialCorrect(email: email, password: pass, vc:self) {
+            self.spinner.isHidden = true
+            return
+        }
+        
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
                 AuthService.instance.loginUser(email: email, password: pass, completion:{(success) in
