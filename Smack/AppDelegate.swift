@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        let s = SocketService()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

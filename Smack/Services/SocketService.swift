@@ -16,7 +16,7 @@ class SocketService: NSObject {
     private var manager: SocketManager
     
     // for NSObjec we have to do super.init()
-    override init() {
+    private override init() {
         manager = SocketManager(socketURL: URL(string: "\(BASE_URL)")!, config: [.log(true), .compress])
         socket = manager.defaultSocket
         super.init()
