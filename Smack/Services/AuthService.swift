@@ -71,10 +71,7 @@ class AuthService{
     }
     
     func loginUser(email:String, password:String, completion: @escaping CompletionHandeler){
-        
-        
         let lowerCaseEmail = email.lowercased()
-        
         
         let body: [String:Any] = [
             "email" : lowerCaseEmail,
