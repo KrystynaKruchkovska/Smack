@@ -20,28 +20,20 @@ class LocalUserDataService{
     
     
     func setUserData(id:String, color:String, avatarName:String, email:String, name:String) {
-        
         self.id = id
         self.avatarColor = color
         self.avatarName = avatarName
         self.email = email
         self.name = name
     }
-//    func deleteUser(user:User){
-//        
-//        
-//    }
-//    
+
     func updateName(name:String) {
         self.name = name
     }
     
     func setAvatarName(avatarName:String) {
         self.avatarName = avatarName
-        
     }
-    
-
     
     func returnUIColor(components:String) -> UIColor{
         let scanner = Scanner(string: components)
@@ -56,29 +48,27 @@ class LocalUserDataService{
         scanner.scanUpToCharacters(from: comma, into: &b)
         scanner.scanUpToCharacters(from: comma, into: &a)
         
-        let defoultColor = UIColor.gray
-        
+        let defaultColor = UIColor.gray
         
         guard let rUnwrapped = r else {
-            return defoultColor
+            return defaultColor
         }
         guard let gUnwrapped = g else {
-            return defoultColor
+            return defaultColor
         }
         guard let bUnwrapped = b else {
-            return defoultColor
+            return defaultColor
         }
         guard let aUnwrapped = a else {
-            return defoultColor
+            return defaultColor
         }
+    
         
+        let rgbaDouble = [rUnwrapped, gUnwrapped, bUnwrapped, aUnwrapped]
+    
+        let rgba = rgbaDouble.map{ CGFloat($0.doubleValue) }
         
-        let rFloat = CGFloat(rUnwrapped.doubleValue)
-        let gFloat = CGFloat(gUnwrapped.doubleValue)
-        let bFloat = CGFloat(bUnwrapped.doubleValue)
-        let aFloat = CGFloat(aUnwrapped.doubleValue)
-        
-        let newColor = UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+        let newColor = UIColor(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3])
         
         return newColor
     }

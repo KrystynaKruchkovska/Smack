@@ -8,14 +8,11 @@
 
 import UIKit
 
-class AdminPanelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class AdminPanelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
-    
-    
-    
     
     override func viewDidLoad() {
         

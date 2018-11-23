@@ -10,6 +10,15 @@ import Foundation
 
 typealias CompletionHandeler = (_ Success: Bool) -> ()
 
+struct REQUEST_BODY_KEYS {
+    static let NAME = "name"
+    static let EMAIL = "email"
+    static let AVATAR_NAME = "avatarName"
+    static let AVATAR_COLOR = "avatarColor"
+    static let ID = "_id"
+    static let PASSWORD = "password"
+    static let TOKEN = "token"
+}
 
 //URL Constants
 let BASE_URL = "https://tinaschattychatchat.herokuapp.com/v1/"
@@ -55,8 +64,8 @@ let adminsArray = ["5bdec3aefb065b00268f2a96"] // admin user
 let HEADER =  [
     "Content-Type": "application/json; charset=utf-8 "
 ]
+
 let BEARER_HEADER = [
     "Authorization":"Bearer \(AuthService.instance.authToken)",
     "Content-Type": "application/json; charset=utf-8 "
-    
 ]

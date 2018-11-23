@@ -18,8 +18,6 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
